@@ -50,6 +50,8 @@ $hash_key = hash('sha256', "$email-$action-$timestamp-$secret");
 - timestamp: Current server timestamp (should match the s parameter).
 - secret: Secret key provided during account registration.
 
+[Table of Contents](#table-of-contents)
+
 # Feed Endpoints
 
 ### Tournaments
@@ -81,6 +83,8 @@ $hash_key = hash('sha256', "$email-$action-$timestamp-$secret");
 }
 ```
 
+[Table of Contents](#table-of-contents)
+
 ### Teams
 
 - **Endpoint:** `/reseller/api/feed/teams`
@@ -109,6 +113,8 @@ $hash_key = hash('sha256', "$email-$action-$timestamp-$secret");
     "total": 3
 }
 ```
+
+[Table of Contents](#table-of-contents)
 
 ### Venues
 
@@ -145,6 +151,8 @@ $hash_key = hash('sha256', "$email-$action-$timestamp-$secret");
     "total": 1
 }
 ```
+
+[Table of Contents](#table-of-contents)
 
 ### Events
 
@@ -211,3 +219,171 @@ $hash_key = hash('sha256', "$email-$action-$timestamp-$secret");
     "total": 1
 }
 ```
+
+[Table of Contents](#table-of-contents)
+
+### Listings
+
+- **Endpoint:** `/reseller/api/feed/listings`
+- **Method:** `GET`
+- **Description:** Search for listings.
+- **Request Params:**
+  - `event_id: Event id (required)`
+  - `listing_id: Search by listing id (optional)`
+- **Response:**
+```json
+{
+    "isSuccessful": true,
+    "data": [
+        {
+            "listing_id": 324132,
+            "category": {
+                "category_id": "3493",
+                "category_name": "Longside Lower Level ",
+                "description": "Longside Lower Level ",
+                "seating_type": "block",
+                "seating_blocks": "N1413;N1411;N1410;N1404;N1403;N1401;N2413;N2412;N2411;N2410;N2404;N2403;N2402;N2401;S128;S127;S229;S228;S227;S122;S121;WL0;W212;W211;W210"
+            },
+            "quantity": 3,
+            "held_quantity": 0,
+            "price": 234,
+            "booking_fee": 74.88,
+            "currency_code": "GBP",
+            "activated": 1,
+            "type": "Electronic Tickets",
+            "split_type": "ANY",
+            "splits": [
+                1,
+                2,
+                3
+            ],
+            "view_type": "Tickets With a Clear View",
+            "is_singles": false,
+            "description": "Longside Lower Level ",
+            "note": "",
+            "fans_side": "",
+            "block": [],
+            "row": [],
+            "image_point_of_view": "",
+            "extra_note_hospitality": "",
+            "instant_download": "link",
+            "fee_for_quantities": {
+                "1-2": 45,
+                "3-4": 65,
+                "5-10": 85,
+                "11-15": 105,
+                "16-20": 155,
+                "20-inf": 195
+            }
+        }
+    ],
+    "total": 1
+}
+```
+
+[Table of Contents](#table-of-contents)
+
+# Ticket Endpoints
+
+### Ticket Detail
+
+- **Endpoint:** `/reseller/api/ticket/listing`
+- **Method:** `GET`
+- **Description:** Get listing information (with event details).
+- **Request Params:**
+  - `listing_id: Id of listing (required)`
+- **Response:**
+```json
+{
+    "isSuccessful": true,
+    "data": {
+        "id": "95920",
+        "name": "Manchester United vs Brentford",
+        "date": "2023-10-07 19:00:00",
+        "min_price": {
+            "price": "2.00",
+            "currency_code": "GBP"
+        },
+        "venue": {
+            "venue_id": "2",
+            "venue_name": "Old Trafford",
+            "venue_city_name": "Manchester",
+            "venue_country_name": "United Kingdom",
+            "categories": [
+                {
+                    "category_id": "6",
+                    "name": "Away Section :",
+                    "blocks": "0E132,0E232,0E231,0E230",
+                    "sub_categories": []
+                },
+                {
+                    "category_id": "49",
+                    "name": "Salford Suite:",
+                    "blocks": "",
+                    "sub_categories": []
+                }
+            ]
+        },
+        "tour": {
+            "id": "4",
+            "name": "Premier League",
+            "nice_name": "English Barclays Premier League",
+        },
+        "team1": {
+            "id": "3",
+            "name": "Manchester United",
+            "t1_nice_name": "Man United"
+        },
+        "team2": {
+            "id": "539",
+            "name": "Brentford",
+            "t2_nice_name": "Brentford FC"
+        },
+        "fans_sides": [],
+        "listing_info": {
+            "listing_id": 324132,
+            "category": {
+                "category_id": "3493",
+                "category_name": "Longside Lower Level ",
+                "description": "Longside Lower Level ",
+                "seating_type": "block",
+                "seating_blocks": "N1413;N1411;N1410;N1404;N1403;N1401;N2413;N2412;N2411;N2410;N2404;N2403;N2402;N2401;S128;S127;S229;S228;S227;S122;S121;WL0;W212;W211;W210"
+            },
+            "quantity": 3,
+            "held_quantity": 0,
+            "price": 234,
+            "booking_fee": 74.88,
+            "currency_code": "GBP",
+            "activated": 1,
+            "type": "Electronic Tickets",
+            "split_type": "ANY",
+            "splits": [
+                1,
+                2,
+                3
+            ],
+            "view_type": "Tickets With a Clear View",
+            "is_singles": false,
+            "description": "Longside Lower Level ",
+            "note": "",
+            "fans_side": "",
+            "block": [],
+            "row": [],
+            "image_point_of_view": "",
+            "extra_note_hospitality": "",
+            "instant_download": "link",
+            "fee_for_quantities": {
+                "1-2": 45,
+                "3-4": 65,
+                "5-10": 85,
+                "11-15": 105,
+                "16-20": 155,
+                "20-inf": 195
+            }
+        }
+    }
+}
+```
+
+[Table of Contents](#table-of-contents)
+
