@@ -387,3 +387,68 @@ $hash_key = hash('sha256', "$email-$action-$timestamp-$secret");
 
 [Table of Contents](#table-of-contents)
 
+
+### Hold Tickets
+
+- **Endpoint:** `/reseller/api/ticket/hold`
+- **Method:** `GET`
+- **Description:** Get hold tickets for adding order.
+- **Request Params:**
+  - `listing_id: Id of listing (required)`
+  - `quantity: The quantity of tickets (required)`
+- **Response:**
+```json
+{
+    "isSuccessful": true,
+    "data": {
+        "hold_id": "9",
+        "held_quantity": 1,
+        "quantity_available": 2
+    }
+}
+```
+
+[Table of Contents](#table-of-contents)
+
+### Update Tickets
+
+- **Endpoint:** `/reseller/api/ticket/hold/update`
+- **Method:** `GET`
+- **Description:** Update the hold quantity of a ticket.
+- **Request Params:**
+  - `hold_id: Id of the hold ticket (required)`
+  - `quantity: The quantity of ticket holds to update (required).`
+- **Response:**
+```json
+{
+    "isSuccessful": true,
+    "data": {
+        "hold_id": "9",
+        "held_quantity": "3",
+        "quantity_available": 0
+    }
+}
+```
+
+[Table of Contents](#table-of-contents)
+
+### Release Tickets
+
+- **Endpoint:** `/reseller/api/ticket/release`
+- **Method:** `GET`
+- **Description:** Release hold ticket.
+- **Request Params:**
+  - `hold_id: Id of the hold ticket (required)`
+- **Response:**
+```json
+{
+    "isSuccessful": true,
+    "data": {
+        "status": true
+    }
+}
+```
+
+[Table of Contents](#table-of-contents)
+
+
