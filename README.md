@@ -524,4 +524,14 @@ $hash_key = hash('sha256', "$email-$action-$timestamp-$secret");
 
 [Table of Contents](#table-of-contents)
 
+### Update Order
 
+- **Endpoint:** `/reseller/api/order/update`
+- **Method:** `GET`
+- **Description:** Update existing order's status.
+- **Request Params:**
+  - `order_id: Id of the order (required)`
+  - `order_status: New status of the order (required). Accept: Paid/Cancelled`
+- **Response:** Order object or error message
+
+[Table of Contents](#table-of-contents)
