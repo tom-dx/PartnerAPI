@@ -1,1 +1,0 @@
-# FTN Partner Webhooks Documentation
