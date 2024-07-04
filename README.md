@@ -449,6 +449,79 @@ $hash_key = hash('sha256', "$email-$action-$timestamp-$secret");
 }
 ```
 
+# Order Endpoints
+
+
+### Add New Order
+
+- **Endpoint:** `/reseller/api/order/add`
+- **Method:** `POST`
+- **Description:** Add new order.
+- **Post Params:**
+  - `hold_id: The id of the hold ticket (required)`
+  - `ticket[listing_id]: The id of listing (required)`
+  - `ticket[quantity]: The order quantity (required)`
+  - `ticket[price]: The price of ticket (required)`
+  - `ticket[block]: The price of ticket (optional)`
+  - `ticket[row]: The price of ticket (optional)`
+  - `customer[first_name]: Customer's first name (required)`
+  - `customer[last_name]: Customer's last name (required)`
+  - `customer[email]: Customer's email (required)`
+  - `customer[phone]: Customer's phone (required)`
+  - `customer[country]: Customer's country (optional)`
+  - `customer[state]: Customer's state (optional)`
+  - `customer[city]: Customer's city (optional)`
+  - `customer[address]: Customer's address (optional)`
+  - `customer[postal_code]: Customer's postal_code (optional)`
+  - `order_status: Order Status (required). Should be New/Paid`
+  - `currency: Currency, it should be the same as event (required)`
+  - `date_time: Purchase date, the date in ISO-8601 UTC Format (required)`
+  - `total_amount: The order's total value (required)`
+  - `note: Order note (optional)`
+- **Response:**
+```json
+{
+    "isSuccessful": true,
+    "data": {
+        "id": "1215850",
+        "date_time": "2024-07-10T15:30:00+00:00",
+        "quantity": 1,
+        "ticket_type": "Electronic Tickets",
+        "currency": "EUR",
+        "sub_total": 133.99,
+        "booking_fee": 49866.01,
+        "grand_total": 50000,
+        "status": "Paid",
+        "customer": {
+            "first_name": "Test",
+            "last_name": "Tester",
+            "email": "admin@google.com",
+            "phone": "0123456789",
+            "postal_code": null,
+            "city": null,
+            "state": null,
+            "country": null,
+            "address": null
+        },
+        "event": {
+            "event_id": "98454",
+            "event_name": "FC Barcelona vs Atletico Madrid",
+            "event_date": "2024-07-11T14:00:00+00:00",
+            "home_team": "FC Barcelona",
+            "away_team": "Atletico Madrid",
+            "location": "Wanda Metropolitano, Madrid, Spain"
+        },
+        "ticket": {
+            "listing_id": "274836",
+            "category_name": "Category 3",
+            "description": "<ul><li>Long Side Upper Tier Tickets.</li><li>Seating in Pairs Guaranteed</li><li>Tickets With a Clear View</li></ul>",
+            "fans_side": "FC Barcelona Fans"
+        },
+        "attendees": []
+    }
+}
+```
+
 [Table of Contents](#table-of-contents)
 
 
