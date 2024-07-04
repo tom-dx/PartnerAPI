@@ -19,6 +19,7 @@ Before integrating with the FTN Partner API, you must contact us to become a par
 4. [Order Endpoints](#order-endpoints)
    - [Add New Order](#add-new-order)
    - [Update Order](#update-order)
+   - [Order Detail](#order-detail)
 5. [Error Codes](#error-codes)
 6. [Contact](#contact)
 
@@ -526,11 +527,22 @@ $hash_key = hash('sha256', "$email-$action-$timestamp-$secret");
 ### Update Order
 
 - **Endpoint:** `/reseller/api/order/update`
-- **Method:** `GET`
+- **Method:** `POST`
 - **Description:** Update existing order's status.
-- **Request Params:**
+- **Post Params:**
   - `order_id: Id of the order (required)`
   - `order_status: New status of the order (required). Accept: Paid/Cancelled`
+- **Response:** Order object or error message
+
+[Table of Contents](#table-of-contents)
+
+### Order Detail
+
+- **Endpoint:** `/reseller/api/order/detail`
+- **Method:** `GET`
+- **Description:** Get order information by order_id.
+- **Request Params:**
+  - `order_id: Id of the order (required)`
 - **Response:** Order object or error message
 
 [Table of Contents](#table-of-contents)
