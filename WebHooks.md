@@ -240,6 +240,6 @@ The `order.fulfillment` webhook is triggered when an order is fulfilled. This we
 
 [Table of Contents](#table-of-contents)
 
-# Contact
+# Contact Us
 
 If you have any questions or need further assistance, please contact our support team at support@footballticketnet.com.
