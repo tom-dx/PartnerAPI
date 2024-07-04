@@ -21,7 +21,6 @@ Before integrating with the FTN Partner API, you must contact us to become a par
    - [Update Order](#update-order)
 5. [Error Codes](#error-codes)
 6. [Contact](#contact)
-7. [License](#license)
 
 # Authentication
 
@@ -535,3 +534,33 @@ $hash_key = hash('sha256', "$email-$action-$timestamp-$secret");
 - **Response:** Order object or error message
 
 [Table of Contents](#table-of-contents)
+
+# Error Codes
+
+The API uses standard HTTP status codes to indicate the success or failure of an API request. In addition to these status codes, the response body will contain a JSON object with additional details.
+
+- 200 OK: The request was successful.
+- 201 Created: The resource was successfully created.
+- 400 Bad Request: The request could not be understood or was missing required parameters.
+- 401 Unauthorized: Authentication failed or user does not have permissions for the requested operation.
+- 404 Not Found: The requested resource could not be found.
+- 500 Internal Server Error: An error occurred on the server.
+
+### Example of error response
+```json
+{
+    "isSuccessful": false,
+    "httpResponseCode": 400,
+    "httpResponseStatus": "Bad Request",
+    "errors": {
+        "error_num": 268,
+        "error": "This order has been cancelled."
+    }
+}
+```
+
+[Table of Contents](#table-of-contents)
+
+# Contact
+
+If you have any questions or need further assistance, please contact our support team at support@footballticketnet.com.
