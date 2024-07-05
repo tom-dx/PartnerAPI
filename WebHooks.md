@@ -155,6 +155,7 @@ The `order.update` webhook is triggered whenever there is an update to an order'
         "booking_fee": 49866.01,
         "grand_total": 50000,
         "status": "Paid",
+        "delivery_status": "Delivered",
         "customer": {
             "first_name": "Test",
             "last_name": "Tester",
@@ -186,7 +187,7 @@ The `order.update` webhook is triggered whenever there is an update to an order'
 
 ### Introduction
 
-The `order.fulfillment` webhook is triggered when an order is fulfilled. This webhook provides ticket files associated or links with the order, which are uploaded in base64 format. The `fulfillment_status` is marked as 'Completed' once all files/evidence are provided.
+The `order.fulfillment` webhook is triggered when an order is fulfilled. This webhook provides ticket files or links associated with the order, which are uploaded in base64 format. The `fulfillment_status` is marked as 'Completed' once all files/evidence are provided.
 
 ### Payload
 
