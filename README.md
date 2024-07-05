@@ -47,7 +47,7 @@ $hash_key = hash('sha256', "$email-$action-$timestamp-$secret");
 ```
 - email: Your registered email
 - action: Current API endpoint being called.
-- timestamp: Current server timestamp (should match the s parameter).
+- timestamp: Current server timestamp (should match the `s` parameter).
 - secret: Secret key provided during account registration.
 
 [Table of Contents](#table-of-contents)
