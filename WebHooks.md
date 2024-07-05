@@ -35,10 +35,16 @@ The `ticket.hold` webhook is triggered when a ticket hold is successfully create
 ```json
 {
     "event": "ticket.hold",
-    "data": {
-        "listing_id": "274836",
-        "quantity_held": 5
-    }
+    "data": [
+        {
+            "listing_id": "274832",
+            "quantity_held": 1
+        },
+        {
+            "listing_id": "274836",
+            "quantity_held": 5
+        }
+    ]
 }
 ```
 
@@ -55,11 +61,18 @@ The `ticket.release` webhook is triggered when a previously held ticket is relea
 ```json
 {
     "event": "ticket.release",
-    "data": {
-        "listing_id": "274836",
-        "quantity_released": 5,
-        "quantity_available": 2
-    }
+    "data": [
+        {
+            "listing_id": "274836",
+            "quantity_released": 5,
+            "quantity_available": 2
+        },
+        {
+            "listing_id": "274835",
+            "quantity_released": 2,
+            "quantity_available": 1
+        }
+    ]
 }
 ```
 
