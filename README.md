@@ -239,45 +239,61 @@ $hash_key = hash('sha256', "$email-$action-$timestamp-$secret");
     "isSuccessful": true,
     "data": [
         {
-            "listing_id": 324132,
+            "event_id": 95920,
+            "venue_id": 2,
+            "tournament_id": 4,
+            "listing_id": 324129,
             "category": {
-                "category_id": "3493",
-                "category_name": "Longside Lower Level ",
-                "description": "Longside Lower Level ",
+                "category_id": "95",
+                "category_name": "Executive Private Boxes :",
+                "description": "Luxury Padded Seating Directly Outside Your Box.",
                 "seating_type": "block",
-                "seating_blocks": "N1413;N1411;N1410;N1404;N1403;N1401;N2413;N2412;N2411;N2410;N2404;N2403;N2402;N2401;S128;S127;S229;S228;S227;S122;S121;WL0;W212;W211;W210"
+                "seating_blocks": "Seat-Box"
             },
-            "quantity": 3,
+            "is_singles": false,
+            "quantity": 20,
             "held_quantity": 0,
-            "price": 234,
-            "booking_fee": 74.88,
-            "currency_code": "GBP",
             "activated": 1,
             "type": "Electronic Tickets",
-            "split_type": "ANY",
-            "splits": [
-                1,
-                2,
-                3
-            ],
-            "view_type": "Tickets With a Clear View",
-            "is_singles": false,
-            "description": "Longside Lower Level ",
+            "price_details": {
+                "currency": "GBP",
+                "price": 20000,
+                "booking_fee": 6400,
+                "fee_for_quantities": {
+                    "1-2": 45,
+                    "3-4": 65,
+                    "5-10": 85,
+                    "11-15": 105,
+                    "16-20": 155,
+                    "20-inf": 195
+                }
+            },
+            "seat_details": {
+                "block": "",
+                "row": "Row 1",
+                "view_type": "Please Note - Tickets With a Restricted View",
+                "image_point_of_view": "",
+                "extra_note_hospitality": "Good hospitality boxes"
+            },
+            "split": {
+                "split_type": "PAIRS",
+                "splits": [
+                    2,
+                    4,
+                    6,
+                    8,
+                    10,
+                    12,
+                    14,
+                    16,
+                    18,
+                    20
+                ]
+            },
+            "description": "Luxury Padded Seating Directly Outside Your Box.",
             "note": "",
             "fans_side": "",
-            "block": [],
-            "row": [],
-            "image_point_of_view": "",
-            "extra_note_hospitality": "",
-            "instant_download": "link",
-            "fee_for_quantities": {
-                "1-2": 45,
-                "3-4": 65,
-                "5-10": 85,
-                "11-15": 105,
-                "16-20": 155,
-                "20-inf": 195
-            }
+            "instant_download": ""
         }
     ],
     "total": 1
@@ -344,45 +360,61 @@ $hash_key = hash('sha256', "$email-$action-$timestamp-$secret");
         },
         "fans_sides": [],
         "listing_info": {
-            "listing_id": 324132,
+            "event_id": 95920,
+            "venue_id": 2,
+            "tournament_id": 4,
+            "listing_id": 324129,
             "category": {
-                "category_id": "3493",
-                "category_name": "Longside Lower Level ",
-                "description": "Longside Lower Level ",
+                "category_id": "95",
+                "category_name": "Executive Private Boxes :",
+                "description": "Luxury Padded Seating Directly Outside Your Box.",
                 "seating_type": "block",
-                "seating_blocks": "N1413;N1411;N1410;N1404;N1403;N1401;N2413;N2412;N2411;N2410;N2404;N2403;N2402;N2401;S128;S127;S229;S228;S227;S122;S121;WL0;W212;W211;W210"
+                "seating_blocks": "Seat-Box"
             },
-            "quantity": 3,
+            "is_singles": false,
+            "quantity": 20,
             "held_quantity": 0,
-            "price": 234,
-            "booking_fee": 74.88,
-            "currency_code": "GBP",
             "activated": 1,
             "type": "Electronic Tickets",
-            "split_type": "ANY",
-            "splits": [
-                1,
-                2,
-                3
-            ],
-            "view_type": "Tickets With a Clear View",
-            "is_singles": false,
-            "description": "Longside Lower Level ",
+            "price_details": {
+                "currency": "GBP",
+                "price": 20000,
+                "booking_fee": 6400,
+                "fee_for_quantities": {
+                    "1-2": 45,
+                    "3-4": 65,
+                    "5-10": 85,
+                    "11-15": 105,
+                    "16-20": 155,
+                    "20-inf": 195
+                }
+            },
+            "seat_details": {
+                "block": "",
+                "row": "Row 1",
+                "view_type": "Please Note - Tickets With a Restricted View",
+                "image_point_of_view": "",
+                "extra_note_hospitality": "Good hospitality boxes"
+            },
+            "split": {
+                "split_type": "PAIRS",
+                "splits": [
+                    2,
+                    4,
+                    6,
+                    8,
+                    10,
+                    12,
+                    14,
+                    16,
+                    18,
+                    20
+                ]
+            },
+            "description": "Luxury Padded Seating Directly Outside Your Box.",
             "note": "",
             "fans_side": "",
-            "block": [],
-            "row": [],
-            "image_point_of_view": "",
-            "extra_note_hospitality": "",
-            "instant_download": "link",
-            "fee_for_quantities": {
-                "1-2": 45,
-                "3-4": 65,
-                "5-10": 85,
-                "11-15": 105,
-                "16-20": 155,
-                "20-inf": 195
-            }
+            "instant_download": ""
         }
     }
 }
