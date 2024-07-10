@@ -164,16 +164,16 @@ The `order.update` webhook is triggered whenever there is an update to an order'
 {
     "event": "order.update",
     "data": {
-        "id": "1215843",
+        "order_id": "1215843",
         "date_time": "2024-07-10T15:30:00+00:00",
-        "quantity": 1,
         "ticket_type": "Electronic Tickets",
         "currency": "EUR",
+        "quantity": 1,
+        "price": 133.99,
         "sub_total": 133.99,
         "booking_fee": 49866.01,
         "grand_total": 50000,
         "status": "Paid",
-        "delivery_status": "Delivered",
         "customer": {
             "first_name": "Test",
             "last_name": "Tester",
