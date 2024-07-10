@@ -269,7 +269,7 @@ $hash_key = hash('sha256', "$email-$action-$timestamp-$secret");
                 }
             },
             "seat_details": {
-                "block": "",
+                "block": "Bock 1",
                 "row": "Row 1",
                 "view_type": "Please Note - Tickets With a Restricted View",
                 "image_point_of_view": "",
@@ -390,7 +390,7 @@ $hash_key = hash('sha256', "$email-$action-$timestamp-$secret");
                 }
             },
             "seat_details": {
-                "block": "",
+                "block": "Block 1",
                 "row": "Row 1",
                 "view_type": "Please Note - Tickets With a Restricted View",
                 "image_point_of_view": "",
