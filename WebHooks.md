@@ -216,8 +216,8 @@ The `order.fulfillment` webhook is triggered when an order is fulfilled. This we
     "data": [
          {
             "order_id": "1215850",
-            "delivery_status": "e-Ticket Sent",  //See #Delivery Status for more details
-            "fulfillment_status": "Completed",   //See #Fulfillment Status for more details
+            "delivery_status": "e-Ticket Sent",  //See Delivery Status for more details
+            "fulfillment_status": "Completed",   //See Fulfillment Status for more details
             "tickets": [
                 "files": [
                     "JVBERi0xLjQKJ...<base64 encoded content>...==",
@@ -239,8 +239,8 @@ The `order.fulfillment` webhook is triggered when an order is fulfilled. This we
     "data": [
          {
             "order_id": "1215850",
-            "delivery_status": "e-Ticket Sent",  //See #Delivery Status for more details
-            "fulfillment_status": "Completed",   //See #Fulfillment Status for more details
+            "delivery_status": "e-Ticket Sent",  //See Delivery Status for more details
+            "fulfillment_status": "Completed",   //See Fulfillment Status for more details
             "tickets": [
                 "links": [
                     "https://ticket.com/ticket-1.jpg",
@@ -262,8 +262,8 @@ The `order.fulfillment` webhook is triggered when an order is fulfilled. This we
     "data": [
          {
             "order_id": "1215850",
-            "delivery_status": "e-Ticket Sent",  //See #Delivery Status for more details
-            "fulfillment_status": "Completed",   //See #Fulfillment Status for more details
+            "delivery_status": "e-Ticket Sent",  //See Delivery Status for more details
+            "fulfillment_status": "Completed",   //See Fulfillment Status for more details
             "tickets": [
                 "mobile_links": [
                     [
@@ -287,8 +287,8 @@ The `order.fulfillment` webhook is triggered when an order is fulfilled. This we
     "data": [
          {
             "order_id": "1215850",
-            "delivery_status": "e-Ticket Sent",  //See #Delivery Status for more details
-            "fulfillment_status": "Completed",   //See #Fulfillment Status for more details
+            "delivery_status": "e-Ticket Sent",  //See Delivery Status for more details
+            "fulfillment_status": "Completed",   //See Fulfillment Status for more details
             "evidences": [
                 "JVBERi0xLjQKJ...<base64 encoded content>...=="
             ]
@@ -296,6 +296,37 @@ The `order.fulfillment` webhook is triggered when an order is fulfilled. This we
     ]
 }
 ```
+
+### Delivery Status
+1. The delivery_status parameter indicates the current status of the ticket delivery process. This status informs whether the tickets have been sent to the customer and what stage the delivery is in.
+2. Possible Values:
+    - "None": Indicates no delivery status has been assigned.
+    - "Details Sent": Details of the order or tickets have been sent to the customer.
+    - "Posting Problems": There were issues encountered while posting the tickets.
+    - "Posted": Tickets have been posted to the customer.
+    - "Hand Delivery": Tickets will be delivered by hand.
+    - "Pick Up Point": Tickets are available for pick-up at a designated location.
+    - "e-Ticket": Tickets are electronic tickets.
+    - "Tickets Collected": Tickets have been collected by the customer.
+    - "Mobile Tickets": Tickets are delivered as mobile tickets.
+    - "e-Ticket Sent": Indicates that the electronic ticket has been successfully sent to the customer.
+    - "e-Ticket Emailed": Electronic tickets have been emailed to the customer.
+    - "Mobile Tickets Sent": Mobile tickets have been sent to the customer.
+    - "Mobile links sent": Links to mobile tickets have been sent to the customer.
+    - "e-Ticket Downloaded": The customer has downloaded the electronic ticket.
+    - "Mobile Tickets Delivered": Mobile tickets have been delivered to the customer.
+    - "Mobile Links Downloaded": The customer has downloaded the mobile ticket links.
+    - "Box Office Collection": Tickets are available for collection at the box office.
+    - "Delivered": Tickets have been delivered to the customer.
+    - "Order Sent": The entire order has been sent to the customer.
+
+### Fulfillment Status
+1. The fulfillment_status parameter represents the overall completion status of the order fulfillment process. It signifies whether all necessary steps and requirements for fulfilling the order have been met.
+2. Possible Values:
+    - "Completed": Indicates that the order fulfillment process is entirely complete. This includes the successful delivery of all tickets and any other required materials or evidence.
+    - "Partial": Indicates that the order fulfillment process is partially complete. Some, but not all, tickets or required materials have been delivered.
+    - "InComplete": Indicates that the order fulfillment process is incomplete. Necessary steps or materials are still outstanding.
+
 
 [Table of Contents](#table-of-contents)
 
