@@ -213,60 +213,87 @@ The `order.fulfillment` webhook is triggered when an order is fulfilled. This we
 ```json
 {
     "event": "order.fulfillment",
-    "data": {
-        "order_id": "1215850",
-        "fulfillment_type": "file",
-        "fulfillment_status": "Completed",
-        "files": [
-            {
-                "file_name": "ticket_1.pdf",
-                "file_content_base64": "JVBERi0xLjQKJ...<base64 encoded content>...=="
-            },
-            {
-                "file_name": "ticket_2.pdf",
-                "file_content_base64": "JVBERi0xLjQKJ...<base64 encoded content>...=="
-            }
-        ]
-    }
+    "data": [
+         {
+            "order_id": "1215850",
+            "delivery_status": "e-Ticket Sent",
+            "fulfillment_status": "Completed",
+            "tickets": [
+                "files": [
+                    "JVBERi0xLjQKJ...<base64 encoded content>...==",
+                    "JVBERi0xLjQKJ...<base64 encoded content>...=="
+                ]
+            ],
+            "instructions": [
+                "JVBERi0xLjQKJ...<base64 encoded content>...=="
+            ]
+        }
+    ]
 }
 ```
 
-2. Fulfill ticket links: Tickets are delivered as mobile links.
+2. Fulfill ticket links: Tickets are delivered as general links.
 ```json
 {
     "event": "order.fulfillment",
-    "data": {
-        "order_id": "1215850",
-        "fulfillment_type": "link",
-        "fulfillment_status": "Completed",
-        "links": [
-            "https://link1.com",
-            "https://link2.com"
-        ]
-    }
+    "data": [
+         {
+            "order_id": "1215850",
+            "delivery_status": "e-Ticket Sent",
+            "fulfillment_status": "Completed",
+            "tickets": [
+                "links": [
+                    "https://ticket.com/ticket-1.jpg",
+                    "https://ticket.com/ticket-2.jpg",
+                ]
+            ],
+            "instructions": [
+                "JVBERi0xLjQKJ...<base64 encoded content>...=="
+            ]
+        }
+    ]
 }
 ```
-  
-3. Fulfill evidence: Provide documentation or proof of ticket delivery.
+
+3. Fulfill mobile links: Tickets are delivered as mobile links.
+```json
+{
+    "event": "order.fulfillment",
+    "data": [
+         {
+            "order_id": "1215850",
+            "delivery_status": "e-Ticket Sent",
+            "fulfillment_status": "Completed",
+            "tickets": [
+                "mobile_links": [
+                    [
+                        "ios": "https://ticket.com/ticket-1.ios.jpg",
+                        "android": "https://ticket.com/ticket-1.android.jpg",
+                    ]
+                ]
+            ],
+            "instructions": [
+                "JVBERi0xLjQKJ...<base64 encoded content>...=="
+            ]
+        }
+    ]
+}
+```
+4. Fulfill evidence: Provide documentation or proof of ticket delivery.
 ```json
 
 {
     "event": "order.fulfillment",
-    "data": {
-        "order_id": "1215850",
-        "fulfillment_type": "evidence",
-        "fulfillment_status": "Completed",
-        "files": [
-            {
-                "file_name": "evidence_1.pdf",
-                "file_content_base64": "JVBERi0xLjQKJ...<base64 encoded content>...=="
-            },
-            {
-                "file_name": "evidence_2.pdf",
-                "file_content_base64": "JVBERi0xLjQKJ...<base64 encoded content>...=="
-            }
-        ]
-    }
+    "data": [
+         {
+            "order_id": "1215850",
+            "delivery_status": "e-Ticket Sent",
+            "fulfillment_status": "Completed",
+            "evidences": [
+                "JVBERi0xLjQKJ...<base64 encoded content>...=="
+            ]
+        }
+    ]
 }
 ```
 
