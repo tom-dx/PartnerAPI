@@ -61,6 +61,7 @@ $hash_key = hash('sha256', "$email-$action-$timestamp-$secret");
 - **Description:** Search for tournaments.
 - **Request Params:**
   - `name: Search tournaments by name (optional)`
+  - `id: Search tournaments by id (optional)`
 - **Response:**
 ```json
 {
@@ -92,6 +93,7 @@ $hash_key = hash('sha256', "$email-$action-$timestamp-$secret");
 - **Description:** Search for teams.
 - **Request Params:**
   - `name: Search teams by name (optional)`
+  - `id: Search teams by id (optional)`
 - **Response:**
 ```json
 {
@@ -123,6 +125,7 @@ $hash_key = hash('sha256', "$email-$action-$timestamp-$secret");
 - **Description:** Search for venues.
 - **Request Params:**
   - `name: Search venues by name (optional)`
+  - `id: Search venues by id (optional)`
 - **Response:**
 ```json
 {
