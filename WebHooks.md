@@ -169,15 +169,15 @@ The `order.update` webhook is triggered whenever there is an update to an order'
         "ticket_type": "Electronic Tickets",
         "currency": "EUR",
         "quantity": 1,
-        "price": 133.99,
-        "sub_total": 133.99,
-        "booking_fee": 49866.01,
-        "grand_total": 50000,
+        "price": 150,
+        "sub_total": 150,
+        "booking_fee": 50,
+        "grand_total": 200,
         "status": "Paid",
         "customer": {
             "first_name": "Test",
             "last_name": "Tester",
-            "email": "admin@google.com",
+            "email": "example@email.com",
             "phone": "0123456789",
             "postal_code": null,
             "city": null,
@@ -188,9 +188,9 @@ The `order.update` webhook is triggered whenever there is an update to an order'
         "attendees": [
             {
                 "index": 1,
-                "birthdate": "10-07-2024",
+                "birthdate": "10-07-1985",
                 "fullname": "Test Tester",
-                "passport": "1111111111111",
+                "passport": "1234567890",
                 "nationality": "American Samoa",
                 "city_of_birth": "Test City",
                 "province_of_birth": "Not in USA and Canada"
