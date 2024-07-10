@@ -216,8 +216,8 @@ The `order.fulfillment` webhook is triggered when an order is fulfilled. This we
     "data": [
          {
             "order_id": "1215850",
-            "delivery_status": "e-Ticket Sent",
-            "fulfillment_status": "Completed",
+            "delivery_status": "e-Ticket Sent",  //See #Delivery Status for more details
+            "fulfillment_status": "Completed",   //See #Fulfillment Status for more details
             "tickets": [
                 "files": [
                     "JVBERi0xLjQKJ...<base64 encoded content>...==",
@@ -239,8 +239,8 @@ The `order.fulfillment` webhook is triggered when an order is fulfilled. This we
     "data": [
          {
             "order_id": "1215850",
-            "delivery_status": "e-Ticket Sent",
-            "fulfillment_status": "Completed",
+            "delivery_status": "e-Ticket Sent",  //See #Delivery Status for more details
+            "fulfillment_status": "Completed",   //See #Fulfillment Status for more details
             "tickets": [
                 "links": [
                     "https://ticket.com/ticket-1.jpg",
@@ -262,8 +262,8 @@ The `order.fulfillment` webhook is triggered when an order is fulfilled. This we
     "data": [
          {
             "order_id": "1215850",
-            "delivery_status": "e-Ticket Sent",
-            "fulfillment_status": "Completed",
+            "delivery_status": "e-Ticket Sent",  //See #Delivery Status for more details
+            "fulfillment_status": "Completed",   //See #Fulfillment Status for more details
             "tickets": [
                 "mobile_links": [
                     [
@@ -287,8 +287,8 @@ The `order.fulfillment` webhook is triggered when an order is fulfilled. This we
     "data": [
          {
             "order_id": "1215850",
-            "delivery_status": "e-Ticket Sent",
-            "fulfillment_status": "Completed",
+            "delivery_status": "e-Ticket Sent",  //See #Delivery Status for more details
+            "fulfillment_status": "Completed",   //See #Fulfillment Status for more details
             "evidences": [
                 "JVBERi0xLjQKJ...<base64 encoded content>...=="
             ]
