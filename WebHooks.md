@@ -323,9 +323,9 @@ The `order.fulfillment` webhook is triggered when an order is fulfilled. This we
 ### Fulfillment Status
 1. The fulfillment_status parameter represents the overall completion status of the order fulfillment process. It signifies whether all necessary steps and requirements for fulfilling the order have been met.
 2. Possible Values:
-    - "Completed": Indicates that the order fulfillment process is entirely complete. This includes the successful delivery of all tickets and any other required materials or evidence.
-    - "Partial": Indicates that the order fulfillment process is partially complete. Some, but not all, tickets or required materials have been delivered.
     - "InComplete": Indicates that the order fulfillment process is incomplete. Necessary steps or materials are still outstanding.
+    - "Partial": Indicates that the order fulfillment process is partially complete. Some, but not all, tickets or required materials have been delivered.
+    - "Completed": Indicates that the order fulfillment process is entirely complete. This includes the successful delivery of all tickets and any other required materials or evidence.
 
 
 [Table of Contents](#table-of-contents)
